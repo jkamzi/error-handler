@@ -23,7 +23,7 @@ export default function errorReporter(
     const error = convertErrors(err, convert || {});
     if (isHttpError(error)) {
       const errorResponseBody = template(error);
-      return res.status(400).json(errorResponseBody);
+      return res.status(error.status).json(errorResponseBody);
     }
 
     return next(error);
