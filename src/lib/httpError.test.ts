@@ -21,6 +21,13 @@ describe('HttpError', () => {
     expect(err.isHttpError).toBeTruthy();
   });
 
+  it('should accept unknwon as previous', () => {
+    const previous: unknown = undefined;
+    const err = new HttpError(401, 'Forbidden', previous);
+
+    expect(err.previous).not.toBeDefined();
+  });
+
   describe('isHttpError/1', () => {
     it('should return true when error is HttpError', () => {
       const err = new HttpError(400, 'Bad Request');
