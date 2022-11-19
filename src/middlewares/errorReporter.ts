@@ -18,7 +18,6 @@ export default function errorReporter(
   options: ErrorReporterOptions,
 ): ErrorRequestHandler {
   const { template, convert } = options;
-
   return (err, req, res, next) => {
     const error = convertErrors(err, convert || {});
     if (isHttpError(error)) {

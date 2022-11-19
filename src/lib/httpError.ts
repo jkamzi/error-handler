@@ -18,11 +18,6 @@ export default class HttpError extends Error {
     super(message);
     this.status = status;
 
-    /**
-     * Allow us to just try {} catch()
-     * with out attempting to figure out
-     * what type the error is.
-     */
     if (previous && previous instanceof Error) {
       this.previous = previous;
     }
