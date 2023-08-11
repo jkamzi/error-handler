@@ -1,5 +1,5 @@
 {
-  "name": "@jansson/error-handler",
+  "name": "@jkamzi/error-handler",
   "private": false,
   "main": "dist/main.js",
   "version": "0.1.1",
