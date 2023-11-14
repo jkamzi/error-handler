@@ -2,7 +2,7 @@
   "name": "@jansson/error-handler",
   "private": false,
   "main": "dist/main.js",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "license": "MIT",
   "author": "Rikard Jansson <package@jansson.io>",
   "files": [
